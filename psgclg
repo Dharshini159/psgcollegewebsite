@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PSG College | Coimbatore</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background: #111827;
+            color: white;
+            padding: 9px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .topbar span {
+            margin-right: 20px;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: white;
+            padding: 15px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #8b0000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .logo-text h2 {
+            color: #8b0000;
+            font-size: 21px;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #8b0000;
+        }
+
+        .apply-btn {
+            background: #8b0000;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 5px;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 580px;
+            background:
+                linear-gradient(rgba(20, 20, 20, 0.65), rgba(20, 20, 20, 0.65)),
+                url("https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: #d4a017;
+            color: white;
+            padding: 7px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            padding: 13px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .primary-btn {
+            background: #d4a017;
+            color: white;
+        }
+
+        .secondary-btn {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #b58900;
+        }
+
+        .secondary-btn:hover {
+            background: white;
+            color: #333;
+        }
+
+        /* NOTICE */
+        .notice {
+            background: #fff5d7;
+            padding: 16px 8%;
+            border-left: 5px solid #d4a017;
+        }
+
+        .notice strong {
+            color: #8b0000;
+        }
+
+        /* COMMON SECTION */
+        .section {
+            padding: 80px 8%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading span {
+            color: #d4a017;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            color: #8b0000;
+            margin-top: 8px;
+        }
+
+        .section-heading p {
+            max-width: 700px;
+            margin: 10px auto;
+            color: #666;
+        }
+
+        /* ABOUT */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .experience {
+            background: #8b0000;
+            color: white;
+            display: inline-block;
+            padding: 15px 22px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .experience strong {
+            font-size: 30px;
+            display: block;
+        }
+
+        .about-content h3 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .check-list li {
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #8b0000;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* STATS */
+        .stats {
+            background: #8b0000;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            padding: 55px 8%;
+        }
+
+        .stat h2 {
+            font-size: 40px;
+            color: #ffd76a;
+        }
+
+        .stat p {
+            font-size: 15px;
+        }
+
+        /* DEPARTMENTS */
+        .departments {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .department {
+            padding: 30px;
+            border-radius: 10px;
+            background: white;
+            border: 1px solid #eee;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .department:hover {
+            transform: translateY(-8px);
+            border-top: 4px solid #8b0000;
+        }
+
+        .department-icon {
+            width: 55px;
+            height: 55px;
+            background: #fff1f1;
+            color: #8b0000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .department h3 {
+            color: #8b0000;
+            margin-bottom: 10px;
+        }
+
+        .department p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .department button {
+            border: none;
+            background: #8b0000;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* PROGRAMMES */
+        .programme-section {
+            background: #f7f7f7;
+        }
+
+        .programmes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .programme {
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+            border-bottom: 4px solid #d4a017;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        .programme h3 {
+            color: #8b0000;
+            margin-bottom: 10px;
+        }
+
+        .programme p {
+            color: #666;
+        }
+
+        /* FACILITIES */
+        .facilities {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .facility {
+            min-height: 180px;
+            background: #8b0000;
+            color: white;
+            border-radius: 10px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .facility h3 {
+            color: #ffd76a;
+            margin-bottom: 8px;
+        }
+
+        /* ADMISSION */
+        .admission-section {
+            background: #f7f7f7;
+        }
+
+        .admission-box {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            background: #8b0000;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #650000;
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .contact-card {
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #eee;
+            border-radius: 10px;
+        }
+
+        .contact-card .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card h3 {
+            color: #8b0000;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: #666;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 50px 8% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        footer h2 {
+            color: #ffd76a;
+            margin-bottom: 12px;
+        }
+
+        footer h3 {
+            margin-bottom: 12px;
+        }
+
+        footer p,
+        footer li {
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 7px;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        /* BACK TO TOP */
+        #topBtn {
+            display: none;
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            background: #8b0000;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 999;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .departments,
+            .programmes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .facilities {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .topbar {
+                display: none;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 82px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .section {
+                padding: 60px 6%;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .departments,
+            .programmes,
+            .facilities {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                padding: 40px 6%;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .admission-box {
+                padding: 25px;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div>
+            <span>📞 +91 422 4344777</span>
+            <span>✉️ info@psgcollege.edu</span>
+        </div>
+
+        <div>
+            <span>Student Portal</span>
+            <span>Alumni</span>
+        </div>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-circle">
+                PSG
+            </div>
+
+            <div class="logo-text">
+                <h2>PSG College</h2>
+                <p>Coimbatore • Tamil Nadu</p>
+            </div>
+
+        </div>
+
+
+        <div class="menu-btn" id="menuBtn">
+            ☰
+        </div>
+
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#departments">Departments</a>
+            <a href="#programmes">Programmes</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#contact">Contact</a>
+
+            <a href="#admission" class="apply-btn">
+                Apply Now
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                EXCELLENCE IN EDUCATION
+            </span>
+
+            <h1>
+                PSG College
+            </h1>
+
+            <p>
+                Building knowledge, character and leadership
+                through quality education, innovation and
+                academic excellence.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="primary-btn">
+                    Explore College
+                </a>
+
+                <a href="#admission" class="secondary-btn">
+                    Admissions
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOTICE -->
+    <div class="notice">
+
+        <strong>📢 Latest Notice:</strong>
+
+        Admissions and academic updates can be displayed here.
+
+    </div>
+
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+
+        <div class="section-heading">
+
+            <span>About Us</span>
+
+            <h2>About PSG College</h2>
+
+            <p>
+                A student project website created to demonstrate
+                a modern college web interface.
+            </p>
+
+        </div>
+
+
+        <div class="about">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80"
+                    alt="College Campus"
+                >
+
+                <div class="experience">
+                    <strong>75+</strong>
+                    Years of Excellence
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <h3>
+                    Education • Innovation • Excellence
+                </h3>
+
+                <p>
+                    PSG College is presented here as a modern
+                    educational institution website focused on
+                    academics, student development and innovation.
+                </p>
+
+                <p>
+                    This webpage is designed as a student project
+                    using HTML, CSS and JavaScript.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>Quality Education</li>
+
+                    <li>Experienced Faculty</li>
+
+                    <li>Modern Learning Environment</li>
+
+                    <li>Innovation and Research</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="stat">
+            <h2>75+</h2>
+            <p>Years of Excellence</p>
+        </div>
+
+        <div class="stat">
+            <h2>20+</h2>
+            <p>Departments</p>
+        </div>
+
+        <div class="stat">
+            <h2>5000+</h2>
+            <p>Students</p>
+        </div>
+
+        <div class="stat">
+            <h2>250+</h2>
+            <p>Faculty Members</p>
+        </div>
+
+    </section>
+
+
+    <!-- DEPARTMENTS -->
+    <section class="section" id="departments">
+
+        <div class="section-heading">
+
+            <span>Academics</span>
+
+            <h2>Our Departments</h2>
+
+            <p>
+                Explore the major academic areas available
+                in this project website.
+            </p>
+
+        </div>
+
+
+        <div class="departments">
+
+            <div class="department">
+
+                <div class="department-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Computer Science
+                </h3>
+
+                <p>
+                    Computer science, software development,
+                    artificial intelligence and modern technologies.
+                </p>
+
+                <button onclick="departmentInfo('Computer Science')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Mechanical Engineering
+                </h3>
+
+                <p>
+                    Engineering concepts, manufacturing,
+                    design and industrial applications.
+                </p>
+
+                <button onclick="departmentInfo('Mechanical Engineering')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrical Engineering
+                </h3>
+
+                <p>
+                    Electrical systems, electronics,
+                    power and automation technologies.
+                </p>
+
+                <button onclick="departmentInfo('Electrical Engineering')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    🧪
+                </div>
+
+                <h3>
+                    Science
+                </h3>
+
+                <p>
+                    Fundamental sciences supporting
+                    technology, research and innovation.
+                </p>
+
+                <button onclick="departmentInfo('Science')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Management
+                </h3>
+
+                <p>
+                    Business, management, leadership and
+                    entrepreneurship education.
+                </p>
+
+                <button onclick="departmentInfo('Management')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    🏗️
+                </div>
+
+                <h3>
+                    Civil Engineering
+                </h3>
+
+                <p>
+                    Construction, infrastructure,
+                    structural engineering and design.
+                </p>
+
+                <button onclick="departmentInfo('Civil Engineering')">
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROGRAMMES -->
+    <section class="section programme-section" id="programmes">
+
+        <div class="section-heading">
+
+            <span>Courses</span>
+
+            <h2>Programmes Offered</h2>
+
+            <p>
+                Example programmes displayed for the
+                student project website.
+            </p>
+
+        </div>
+
+
+        <div class="programmes">
+
+            <div class="programme">
+
+                <h3>Bachelor's Programmes</h3>
+
+                <p>
+                    Undergraduate programmes designed to
+                    provide strong academic and technical knowledge.
+                </p>
+
+            </div>
+
+
+            <div class="programme">
+
+                <h3>Master's Programmes</h3>
+
+                <p>
+                    Advanced programmes for specialization,
+                    research and professional development.
+                </p>
+
+            </div>
+
+
+            <div class="programme">
+
+                <h3>Research Programmes</h3>
+
+                <p>
+                    Research opportunities encouraging
+                    innovation and new discoveries.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FACILITIES -->
+    <section class="section" id="facilities">
+
+        <div class="section-heading">
+
+            <span>Campus</span>
+
+            <h2>Campus Facilities</h2>
+
+            <p>
+                Facilities displayed as part of this
+                educational website project.
+            </p>
+
+        </div>
+
+
+        <div class="facilities">
+
+            <div class="facility">
+
+                <h3>📚 Library</h3>
+
+                <p>
+                    Learning resources and study spaces.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <h3>🔬 Laboratories</h3>
+
+                <p>
+                    Practical learning and research facilities.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <h3>🏠 Hostel</h3>
+
+                <p>
+                    Student accommodation facilities.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <h3>🏃 Sports</h3>
+
+                <p>
+                    Sports and student recreation facilities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADMISSION -->
+    <section class="section admission-section" id="admission">
+
+        <div class="section-heading">
+
+            <span>Admissions</span>
+
+            <h2>Admission Enquiry</h2>
+
+            <p>
+                Fill the form below to submit a sample
+                admission enquiry.
+            </p>
+
+        </div>
+
+
+        <div class="admission-box">
+
+            <form id="admissionForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter your name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="studentEmail"
+                            placeholder="Enter your email"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter phone number"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Programme
+                        </label>
+
+                        <select id="programme">
+
+                            <option value="">
+                                Select Programme
+                            </option>
+
+                            <option value="Undergraduate">
+                                Undergraduate
+                            </option>
+
+                            <option value="Postgraduate">
+                                Postgraduate
+                            </option>
+
+                            <option value="Research">
+                                Research
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Message
+                        </label>
+
+                        <textarea
+                            placeholder="Enter your enquiry"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Enquiry
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+
+        <div class="section-heading">
+
+            <span>Get In Touch</span>
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Contact details displayed for this
+                student project website.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>Address</h3>
+
+                <p>
+                    Coimbatore, Tamil Nadu, India
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <h3>Phone</h3>
+
+                <p>
+                    +91 422 4344777
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    ✉️
+                </div>
+
+                <h3>Email</h3>
+
+                <p>
+                    info@psgcollege.edu
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2>PSG College</h2>
+
+                <p>
+                    A modern student project website created
+                    using HTML, CSS and JavaScript.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Departments</li>
+                    <li>Programmes</li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Campus</h3>
+
+                <ul>
+
+                    <li>Library</li>
+                    <li>Laboratories</li>
+                    <li>Hostel</li>
+                    <li>Sports</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 PSG College Student Project.
+            This is a demo website and is not the official PSG website.
+
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+    <button id="topBtn" onclick="goTop()">
+        ↑
+    </button>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        /* MOBILE MENU */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener("click", function() {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+
+        /* DEPARTMENT BUTTON */
+
+        function departmentInfo(name) {
+
+            alert(
+                "Department: " +
+                name +
+                "\n\nMore information can be added to this section later."
+            );
+
+        }
+
+
+        /* ADMISSION FORM */
+
+        const form =
+            document.getElementById("admissionForm");
+
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("studentName")
+                .value.trim();
+
+
+            const email =
+                document.getElementById("studentEmail")
+                .value.trim();
+
+
+            const phone =
+                document.getElementById("phone")
+                .value.trim();
+
+
+            const programme =
+                document.getElementById("programme")
+                .value;
+
+
+            if (name === "") {
+
+                alert("Please enter your name.");
+
+                return;
+
+            }
+
+
+            if (email === "") {
+
+                alert("Please enter your email.");
+
+                return;
+
+            }
+
+
+            if (phone.length < 10) {
+
+                alert("Please enter a valid phone number.");
+
+                return;
+
+            }
+
+
+            if (programme === "") {
+
+                alert("Please select a programme.");
+
+                return;
+
+            }
+
+
+            alert(
+                "Admission Enquiry Submitted Successfully!\n\n" +
+
+                "Name: " + name +
+
+                "\nEmail: " + email +
+
+                "\nPhone: " + phone +
+
+                "\nProgramme: " + programme
+            );
+
+
+            form.reset();
+
+        });
+
+
+        /* BACK TO TOP */
+
+        const topBtn =
+            document.getElementById("topBtn");
+
+
+        window.addEventListener("scroll", function() {
+
+            if (window.scrollY > 400) {
+
+                topBtn.style.display = "block";
+
+            } else {
+
+                topBtn.style.display = "none";
+
+            }
+
+        });
+
+
+        function goTop() {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
